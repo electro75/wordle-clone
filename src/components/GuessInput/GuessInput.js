@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function GuessInput() {
+function GuessInput({guessList, setGuessList}) {
 
   const [guess, setGuess] = useState('')
 
@@ -11,8 +11,10 @@ function GuessInput() {
       return
     };
 
-    console.log(guess);
-    setGuess('')
+    const nextGuessList = [...guessList, guess];
+    console.log(nextGuessList);
+    setGuessList(nextGuessList);
+    setGuess('');
   }
 
   return (
