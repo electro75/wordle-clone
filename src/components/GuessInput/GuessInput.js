@@ -12,7 +12,6 @@ function GuessInput({guessList, setGuessList}) {
     };
 
     const nextGuessList = [...guessList, guess];
-    console.log(nextGuessList);
     setGuessList(nextGuessList);
     setGuess('');
   }
