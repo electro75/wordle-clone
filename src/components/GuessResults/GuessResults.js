@@ -1,14 +1,14 @@
 import React from 'react';
 import Guess from '../Guess';
 
-function GuessResults({ guessList }) {
+function GuessResults({ guessList, answer }) {
   const rows = new Array(5).fill('');
   const cols = new Array(6).fill(rows);
 
   const getGuess = (guessNumber) => {
     if(!guessList.length) return <Guess guess=''/>
     if(guessNumber < guessList.length) {
-      return <Guess guess={guessList[guessNumber]} />
+      return <Guess guess={guessList[guessNumber]} answer={answer}/>
     }
     return <Guess guess=''/>
   }
